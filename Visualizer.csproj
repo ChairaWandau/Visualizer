@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C037149D-F9CC-4FBA-8464-36DB8C56EE94}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\CurrentLines_PointsSelectionMethods\IPointsSelectionMethods.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\CurrentLines_PointsSelectionMethods\TPointsSelection_Circle.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\CurrentLines_PointsSelectionMethods\TPointsSelection_Line.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\CurrentLines_PointsSelectionMethods\TPointsSelection_ManualInput.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\CurrentLines_PointsSelectionMethods\TPointsSelection_OnPlane.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\CurrentLines_PointsSelectionMethods\TPointsSelection_SeveralCircles.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TResultsManager.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero_CurrentLines.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero_CurrentLinesPointsSelection.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero_CurrentLinesSettings.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero_CurrentLinesValueForVisualisation.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero_DisplayOnPlane.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero_DisplayOnSurface.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero_SeriesOfCalculationOnPlane.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\TViewerAero_SeriesOfCurrentLines.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\Visualizer\TViewerAero_Scale2D.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\Visualizer\TViewerAero_UVMap.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\Visualizer\TViewerAero_Visualizer.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\Visualizer\TViewerAero_Visualizer_Dispose.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\Visualizer\TViewerAero_Visualizer_PlaneAndScale.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\Visualizer\TViewerAero_Visualizer_SeriesForCurrentLines.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\Visualizer\TViewerAero_Visualizer_SeriesOfCalculation.cs" />
+    <Compile Include="Visualization\FieldsAndCurrents\Visualizer\TViewerAero_Visualizer_Textures.cs" />
+    <Compile Include="Visualization\Helpers\TViewerAero_Helper.cs" />
+    <Compile Include="Visualization\Helpers\TViewerAero_HelperCurrentLines.cs" />
+    <Compile Include="Visualization\Helpers\TViewerAero_Tetrahedron.cs" />
+    <Compile Include="Visualization\PlaneControl\TViewerAero_MovePlaneWithKeyboardAndMouse.cs" />
+    <Compile Include="Visualization\PlaneControl\TViewerAero_Plane.cs" />
+    <Compile Include="Visualization\PlaneControl\TViewerAero_Plane_Visualizer.cs" />
+    <Compile Include="Visualization\Structs\FiniteElementModel_Visual\TFemElement_Visual.cs" />
+    <Compile Include="Visualization\Structs\FiniteElementModel_Visual\TFemFace_Visual.cs" />
+    <Compile Include="Visualization\Structs\FiniteElementModel_Visual\TFemNode_Visual.cs" />
+    <Compile Include="Visualization\Structs\FiniteElementModel_Visual\TFiniteElementModel_Visual.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
